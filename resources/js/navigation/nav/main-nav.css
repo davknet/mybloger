@@ -1,0 +1,158 @@
+/* nav.main-nav ul
+{
+    list-style: none ;
+}
+nav.main-nav ul.main-unordered-list
+{
+    display:flex;
+    align-items: center;
+    width:70%;
+}
+
+nav.main-nav ul.main-unordered-list li
+{
+    margin-left:2%;
+    padding: 1%  2%;
+
+
+}
+
+nav.main-nav ul li a
+{
+    color: #fff ;
+    text-decoration: none ;
+    text-align: center;
+    white-space: nowrap;
+    font-size:14px;
+    font-size: 1rem ;
+}
+
+
+nav.main-nav ul.main-small-unordered-list
+{
+
+    display:flex;
+    align-items: center;
+    justify-content:center;
+    width:24%;
+}
+
+nav.main-nav ul.main-small-unordered-list li
+{
+    margin-right:5%;
+} */
+
+
+/* ul li a:haver
+{
+    color: hsl(48, 100%, 50%);
+} */
+
+/* div.humburger-icon {
+    margin: auto 40px;
+    display: none  ;
+    cursor: pointer;
+    width: 35px;
+    height: 35px;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+div.humburger-icon div{
+    width: 35px;
+    height: 3px;
+    background-color: #fff;
+    margin: 6px 0;
+    transition: 0.4s;
+} */
+
+
+nav.main-nav ul {
+    @apply list-none;
+  }
+
+  /* Styles for the main unordered list */
+  nav.main-nav ul.main-list {
+    @apply flex items-center;
+    width: 70%; /* Arbitrary value */
+  }
+
+  nav.main-nav ul.main-list li.main-list-item {
+    @apply ml-[2%] py-[1%] px-[2%]; /* Use arbitrary values (requires JIT mode) */
+  }
+
+  /* Styles for anchor tags inside lists */
+  nav.main-nav ul li.main-list-item a.main-link {
+    @apply text-white no-underline text-center whitespace-nowrap text-base;
+  }
+
+   nav.main-nav ul li.main-list-item a.main-link:hover {
+
+    color: hsl(48, 80%, 49%);
+   }
+
+   nav.main-nav ul li.main-list-item a.main-link:active {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+    color: #ffbb00;
+   }
+   nav.main-nav ul li.dropdown  {
+
+    position: relative ;
+    z-index:1;
+
+   }
+   nav.main-nav ul li.dropdown p {
+
+    @apply text-white  text-base flex cursor-pointer
+
+   }
+   nav.main-nav ul li.dropdown p:hover {
+
+
+    color: hsl(48, 80%, 49%);
+
+   }
+
+   nav.main-nav ul li.dropdown p:active{
+
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+    color: hsl(44, 100%, 50%);
+
+   }
+  /* Styles for the small unordered list */
+  nav.main-nav ul.main-small-unordered-list {
+    @apply flex items-center justify-center;
+    width: 24%;
+  }
+
+  nav.main-nav ul.main-small-unordered-list li {
+    @apply mr-[5%];
+  }
+
+@media only  screen  and ( max-width:1024px ){
+    header nav.main-nav
+    {
+      display:none ;
+    }
+
+
+
+    div.humburger-icon
+    {
+      display: block ;
+
+    }
+
+    header div.brand
+    {
+      width:90%;
+      padding-left: 10% ;
+
+    }
+
+
+
+    div.humburger-icon.open ul.mobile-menu {
+      display: block ;
+  }
+}

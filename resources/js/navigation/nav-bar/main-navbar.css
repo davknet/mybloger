@@ -1,0 +1,11 @@
+nav.main-nav
+{
+    width:85%;
+    margin:0;
+    padding:0 3%;
+    height:50px;
+    display: flex ;
+    justify-content: space-between;
+    text-align: justify ;
+    /* border:1px solid #fff; */
+}

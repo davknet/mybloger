@@ -1,0 +1,60 @@
+
+ul.main-list li.dropdown ul.min-dropdown {
+    position: absolute;
+    left: 0;
+    top: 54px;
+    min-width: 200px;
+    min-height: 100px;
+    width: auto ;
+    background-color: hsla(223, 96%, 48%, 0.872);
+    padding: 25px;
+    z-index: 200;
+
+    /* Start hidden */
+    opacity: 0;
+    transform: translateY(-10px);
+    pointer-events: none; /* Prevent interactions when hidden */
+
+    /* Animate changes to opacity and transform */
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+ul.main-list li.dropdown ul.show {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto; /* Re-enable interactions when visible */
+}
+
+
+ul.main-list li.dropdown ul.min-dropdown li.mini-list-item
+{
+    width:100%;
+    height: fit-content ;
+    border-bottom:1px solid #fff ;
+    padding:5px;
+}
+
+ul.main-list li.dropdown ul.min-dropdown li.mini-list-item:hover
+{
+   border-bottom:1px solid   hsl(48, 80%, 49%);
+
+}
+
+ul.main-list li.dropdown ul.min-dropdown li.mini-list-item:active
+{
+   border-bottom:1px solid   hsl(44, 100%, 50%);
+   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+}
+
+ul.main-list li.dropdown ul.min-dropdown li.mini-list-item:hover a
+{
+   color :  hsl(48, 80%, 49%);
+
+}
+
+ul.main-list li.dropdown ul.min-dropdown li.mini-list-item:active a
+{
+   color  : hsl(44, 100%, 50%);
+   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+}
+

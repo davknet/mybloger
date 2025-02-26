@@ -1,0 +1,45 @@
+ul.mini-mobile-dropdown
+{
+    list-style: none  ;
+    width: 100% ;
+    /* display:none  ; */
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 1.2s ease-out;
+
+}
+
+ul.mini-mobile-dropdown li.mini-list-item {
+
+    @apply p-[3%] ps-2
+
+}
+ul.mini-mobile-dropdown li.mini-list-item:hover {
+
+  border-bottom:1px solid hsl(48, 80%, 49%);
+}
+ ul.mini-mobile-dropdown li.mini-list-item:hover a.mini-link {
+
+    color :  hsl(48, 80%, 49%);
+
+}
+
+ul.mini-mobile-dropdown li.mini-list-item:active a.mini-link {
+
+
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+    color: hsl(44, 100%, 50%);
+}
+
+
+
+ul.mobile-menu li.dropdown ul.show {
+
+    /* display:block   ; */
+    max-height: 500px  ;
+}
+
+
+
+
+

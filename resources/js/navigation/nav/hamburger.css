@@ -1,0 +1,14 @@
+.humburger-icon {
+    /* margin: auto 40px; means auto vertical and 40px horizontal */
+    @apply my-auto mx-[30px] hidden cursor-pointer w-[50px] h-[35px]  p-[5px] rounded-[5px];
+
+  }
+
+  /* The individual bars inside the hamburger icon */
+  .humburger-icon > div {
+    @apply w-[35px] h-[3px] bg-white my-[6px] cursor-pointer transition-all duration-[400ms];
+  }
+
+  .humburger-icon:hover > div {
+   background-color:  #ffbb00;
+  }
