@@ -1,5 +1,6 @@
-import React , {useRef , useState } from 'react' ;
+import React , {useRef , useState , useEffect} from 'react' ;
 import { Link } from "@inertiajs/react";
+import axios from "axios";
 import DropDownIcon from "../../icons/DropdownIcon";
 import './mobile-nav.css';
 import MiniDropDown from "../../dropdowns/MiniDropDown";
@@ -16,13 +17,22 @@ import MiniMobileDropDown from '../../dropdowns/MiniMobileDropDown';
 
 const MainMobileNav = () => {
 
+  const [navItems, setNavItems] = useState([]);
+
+    useEffect(() => {
+        axios.get("/api/navbars").then((response) => {
+            setNavItems(response.data);
+        });
+    }, []);
+
+
        const dropdownRef = useRef(null);
        const [direction, setDirection] = useState(false);
 
       const toggleDropdown = (e) => {
 
         e.stopPropagation();
-         console.log(dropdownRef.current);
+        //  console.log(dropdownRef.current);
         if (dropdownRef.current) {
             // Find the <ul> element within the dropdown
             const dropList = dropdownRef.current.querySelector('ul');
@@ -44,6 +54,30 @@ const MainMobileNav = () => {
 
              <hr></hr>
 
+
+
+                    {navItems.map((item) => (
+
+                     item.drop_id ? (
+
+                    <li key={`li-${item.nav_id}`} className="main-list-item dropdown" ref={dropdownRef} >
+                          <p className="dropdown-list"  onClick={toggleDropdown} >{item.extra} <span> <DropDownIcon master={direction} /> </span> </p>
+                        <MiniMobileDropDown />
+                    </li>
+
+
+
+                ) : (
+
+                        <li  key={`li-${item.nav_id}`}  className="main-link-items" id={`main-link-list-${item.nav_id}`}>
+                                <Link href={item.slug} className="main-link" id={`main-link-${item.nav_id}`}>{item.name}</Link>
+                        </li>
+
+                   )
+                    ))}
+
+
+{/*
              <li className="main-link-items" id="main-link-list-1">
                 <Link href="/" className="main-link" id="main-link-1">Home</Link>
             </li>
@@ -75,7 +109,7 @@ const MainMobileNav = () => {
             </li>
             <li className="main-link-items" id="main-link-list-1">
                 <Link href="/sign-up" className="main-link" id="main-link-1">Sign-up</Link>
-            </li>
+            </li> */}
       </ul>
        </>
      );

@@ -16,6 +16,7 @@ return new class extends Migration
             $table->integer('lang_id')->unsigned(); // Foreign key as an unsigned integer to match languages table
             $table->string('slug');
             $table->string('title');
+            $table->string('name');
             $table->text('content');
             $table->foreignId('author')->constrained('users', 'id')->onDelete('cascade'); // Foreign key for author
             $table->boolean('is_active');

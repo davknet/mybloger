@@ -6,7 +6,7 @@ import DefaultLayout from "../layouts/DefaultLayout"
 
 const Home = ({page}) => {
 
-    console.log(page);
+    // console.log(page);
 
     return(
         <>
