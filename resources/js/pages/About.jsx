@@ -10,7 +10,7 @@ const About = ({page}) => {
 
     return(
         <>
-            <Head title="About Us" />
+            <Head title={page.title} />
             <div className="home-page w-full p-1 ">
 
                     <h1 className="title text-center text-gray-900 text-lg"> {page.title } </h1>

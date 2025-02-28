@@ -13,12 +13,16 @@ use Illuminate\Database\Seeder;
 class DatabaseSeeder extends Seeder
 {
 
+
+
+
     public int $counter = 0 ;
     protected   $pages = [
 
         [ 'lang_id'  => 1 ,  'slug'  => '/' , 'title' => 'Home Page' ,   'content'  => '' , 'author' => 1 , 'is_active' => true   , 'name' => 'Home'] ,
         [ 'lang_id'  => 1 ,  'slug'  => '/contact' , 'title' => 'Contact Us' ,   'content'  => '' , 'author' => 1 , 'is_active' => true , 'name' => 'About' ] ,
         [ 'lang_id'  => 1 ,  'slug'  => '/about' , 'title' => 'About Us' ,   'content'  => '' , 'author' => 1 , 'is_active' => true  , 'name' => 'Contact'] ,
+
 
       ];
       protected  $dropdowns = [
@@ -33,6 +37,9 @@ class DatabaseSeeder extends Seeder
         [ 'lang_id'  => 1 , 'page_id' => 3 , 'drop_id' => null  ,  'position'  =>   3 , 'extra'  =>   ''  , 'is_dropdown'  =>  false  , 'dropdown_type'  =>  'none' ] ,
         [ 'lang_id'  => 1 , 'page_id' => null , 'drop_id' => 1 ,  'position'  =>   3 , 'extra'  =>   'Categoriess'  , 'is_dropdown'  =>  false  , 'dropdown_type'  =>  'small' ]
      ] ;
+
+
+
 
 
 

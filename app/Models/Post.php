@@ -12,7 +12,13 @@ class Post extends Model
 
 
     protected $fillable = [
-        'body',
+
+         'lang_id' ,
+         'name'   ,
+         'title'  ,
+         'slug'   ,
+         'body'   ,
+        'featured_image'
 
     ];
 }
